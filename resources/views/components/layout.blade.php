@@ -11,6 +11,12 @@
                 max-width: 400px;
                 margin: auto;
             }
+
+           .card {
+            background: #e3e3e3;
+            padding: 1rem;
+            text-align: center;
+           }
         </style>
 
     </head>

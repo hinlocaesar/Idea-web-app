@@ -1,3 +1,3 @@
-<div class="card" style="background: #e3e3e3; padding: 1rem; text-align: center;">
+<div {{ $attributes->merge(['class' => 'card']) }}>
     {{ $slot }}
 </div>
