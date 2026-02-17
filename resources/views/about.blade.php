@@ -8,10 +8,10 @@
 <body>
 
 
-<h1>Welcome to Laravel</h1>
+<h1>this is the about page</h1>
 
 <div>
-        <a href="/about">About us</a>
+        <a href="/">Return Home</a>
 </div>
 
 </body>
