@@ -1,18 +1,12 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
-
-
-<h1>Welcome to Laravel</h1>
+<x-layout title="Home">
+    <h1>Welcome to Laravel</h1>
 
 <div>
-        <a href="/about">About us</a>
+ <a href="/">Home</a>
+ <a href="/about">About us</a>
+ <a href="/contact">Contact us</a>
 </div>
 
-</body>
-</html>
+</x-layout>
+
+
