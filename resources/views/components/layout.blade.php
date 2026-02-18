@@ -5,6 +5,7 @@
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <title>{{$title}}</title>
+        <script src="https://cdn.tailwindcss.com"></script>
 
         <style>
             .max-w-400 {
@@ -21,7 +22,7 @@
 
     </head>
 
-    <body>
+    <body class="bg-gray-700 p-6 max-w-xl max-auto">
         {{ $slot }}
     </body>
  </html>
