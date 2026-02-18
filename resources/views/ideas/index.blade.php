@@ -3,9 +3,9 @@
 <form method="POST" action="/ideas">
     @csrf
     <div class="col-span-full">
-        <label for="ideas" class="block text-sm/6 font-medium text-white">New Idea</label>
+        <label for="description" class="block text-sm/6 font-medium text-white">New Idea</label>
         <div class="mt-2">
-            <textarea id="ideas" name="ideas" rows="3" class="block w-full rounded-md bg-white/5 px-3"></textarea>
+            <textarea id="description" name="description" rows="3" class="block w-full rounded-md bg-white/5 px-3"></textarea>
         </div>
     </div>
 
@@ -22,8 +22,8 @@
         <ul class="mt-6 space-y-2">
             @foreach ($ideas as $idea)
 <li>
-    <p class="inline mr-4">{{ $idea->description }}</p>
-    <p class="inline">{{ $idea->state }}</p>
+    <a href="/ideas/{{ $idea->id }}" class="inline mr-4">{{ $idea->description }}</a>
+    <a href="/ideas/{{ $idea->id }}/edit" class="inline">{{ $idea->state }}</a>
 </li>
             @endforeach
         </ul>
