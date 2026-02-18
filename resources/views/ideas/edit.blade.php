@@ -1,6 +1,6 @@
 <x-layout>
 
-  <form method="POST" action="/ideas/{{ $idea->id }}/edit">
+  <form method="POST" action="/ideas/{{ $idea->id }}">
 
     @csrf
     @method('PATCH')
