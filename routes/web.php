@@ -3,16 +3,13 @@
 use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
-    return view('home', [
-        'message' => 'Hello World',
-        'person' => request('person', "Word "),
+    return view('welcome', [
+        'tasks' => [
+            'Go to the market',
+            'Walk the dog',
+            'Watch a video tutorial',
+        ],
     ]);
 });
 
-Route::get('/about', function () {
-    return view('about');
-});
-
-Route::get('/contact', function () {
-    return view('contact');
-});
+?>

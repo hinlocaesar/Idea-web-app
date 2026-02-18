@@ -1,12 +1,10 @@
-<x-layout title="Home">
-    <h1>Welcome to Laravel</h1>
-
-<div>
- <a href="/">Home</a>
- <a href="/about">About us</a>
- <a href="/contact">Contact us</a>
-</div>
-
+<x-layout>
+//check if list is not empty
+@if (!empty($tasks))
+    <ul>
+        @foreach ($tasks as $task)
+            <li>{{ $task }}</li>
+        @endforeach
+    </ul>
+@endif
 </x-layout>
-
-
