@@ -13,12 +13,17 @@
 
         <textarea id="description" name="description" rows="3"
 
-          class="block w-full rounded-md bg-white/5 px-3 py-1.5 text-base text-white outl">
+          class="block w-full rounded-md bg-white/5 px-3 py-1.5 text-base text-white outline">
             {{ $idea->description }}
         </textarea>
 
       </div>
 
+    </div>
+
+    <div class="mt-4 text-sm/6 text-gray-400">
+      <p><strong>Created:</strong> {{ $idea->created_at->format('F j, Y \a\t g:i A') }}</p>
+      <p><strong>Last Updated:</strong> {{ $idea->updated_at->format('F j, Y \a\t g:i A') }}</p>
     </div>
 
     <p class="mt-3 text-sm/6 text-gray-400">Have an idea you want to save for later?</p>
