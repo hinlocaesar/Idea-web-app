@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\IdeaController;
+use App\Http\Controllers\Auth\RegisterUserController;
 use Illuminate\Support\Facades\Route;
 use App\Models\Idea;
 
@@ -29,6 +30,11 @@ Route::post('/ideas', [IdeaController::class, 'store']);
 //destroy
 Route::delete('/ideas/{idea}', [IdeaController::class, 'destroy']);
 
+
+
+//register
+Route::get('/register', [RegisterUserController::class, 'create']);
+Route::post('/register', [RegisterUserController::class, 'store']);
 
 
 
