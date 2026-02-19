@@ -1,21 +1,25 @@
 <x-layout>
 
 @if(count($ideas))
-    <div class="mt-6 space-y-2 text-white">
-        <h2 class="text-2xl font-bold">Your Ideas</h2>
-        <ul class="mt-6 space-y-2">
+    <div class="mt-6">
+        <h2 class="text-2xl font-bold mb-6">Your Ideas</h2>
+        <div class="space-y-2">
             @foreach ($ideas as $idea)
-<li>
-    <a href="/ideas/{{ $idea->id }}" class="inline mr-4">{{ $idea->description }}</a>
-    <a href="/ideas/{{ $idea->id }}/edit" class="inline">{{ $idea->state }}</a>
-</li>
+                <div class="card bg-base-100 shadow-xl">
+                    <div class="card-body p-4">
+                        <div class="flex items-center justify-between">
+                            <a href="/ideas/{{ $idea->id }}" class="link link-primary text-lg">{{ $idea->description }}</a>
+                            <a href="/ideas/{{ $idea->id }}/edit" class="badge badge-outline">{{ $idea->state }}</a>
+                        </div>
+                    </div>
+                </div>
             @endforeach
-        </ul>
+        </div>
     </div>
 @else
-    <div class="mt-6 space-y-2 text-white">
-        <h2 class="text-2xl font-bold">No Ideas Found</h2>
-        <a href="/ideas/create" class="inline-block mt-4 text-indigo-500 underline">Create an Ideas</a>
+    <div class="mt-6 text-center">
+        <h2 class="text-2xl font-bold mb-4">No Ideas Found</h2>
+        <a href="/ideas/create" class="btn btn-primary">Create an Idea</a>
     </div>
 @endif
 </x-layout>

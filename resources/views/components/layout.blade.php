@@ -6,23 +6,15 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <title>{{$title}}</title>
         <script src="https://cdn.tailwindcss.com"></script>
-
-        <style>
-            .max-w-400 {
-                max-width: 400px;
-                margin: auto;
-            }
-
-           .card {
-            background: #e3e3e3;
-            padding: 1rem;
-            text-align: center;
-           }
-        </style>
+        <link href="https://cdn.jsdelivr.net/npm/daisyui@4.4.19/dist/full.min.css" rel="stylesheet" type="text/css" />
+        <script src="https://cdn.tailwindcss.com"></script>
 
     </head>
 
-    <body class="bg-gray-700 p-6 max-w-xl max-auto">
-        {{ $slot }}
+    <body class="bg-base-200 min-h-screen">
+        <x-navbar />
+        <main class="container mx-auto p-6">
+            {{ $slot }}
+        </main>
     </body>
  </html>
