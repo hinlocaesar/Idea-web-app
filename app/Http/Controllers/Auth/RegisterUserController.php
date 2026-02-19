@@ -12,8 +12,26 @@ class RegisterUserController extends Controller
         return view('auth.register');
     }
 
-    public function store()
+    public function store(Request $request)
     {
-        dd("Create new user and log them in");
+        //validate the request
+        $request->validate([
+            'name' => 'required',
+            'email' => 'required|email|unique:users',
+            'password' => 'required|min:8',
+        ]);
+
+        //create user
+        $user = \App\Models\User::create([
+            'name' => $request->name,
+            'email' => $request->email,
+            'password' => \Illuminate\Support\Facades\Hash::make($request->password),
+        ]);
+
+        //log user in
+        \Illuminate\Support\Facades\Auth::login($user);
+
+        //redirect to home page
+        return redirect('/');
     }
 }

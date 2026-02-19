@@ -1,11 +1,8 @@
 <x-layout>
-    <form action="/register" method="POST">
+    <form action="/login" method="POST">
     @csrf
     <fieldset class="fieldset bg-base-200 border-base-300 border-white rounded-box w-xs border p-4 mx-auto">
-    <legend class="fieldset-legend">Register</legend>
-
-    <label class="label">Name</label>
-    <input required type="text" name="name" class="input" placeholder="Your Name" />
+    <legend class="fieldset-legend">log in</legend>
 
     <label class="label">Email</label>
     <input required type="email" name="email" class="input" placeholder="Email" />
@@ -15,7 +12,7 @@
     <br>
 
 
-        <button class="btn btn-neutral mt-4">Register</button>
+        <button class="btn btn-neutral mt-4">login</button>
 
 
     </fieldset>
