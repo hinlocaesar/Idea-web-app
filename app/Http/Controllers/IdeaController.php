@@ -31,7 +31,13 @@ class IdeaController extends Controller
      */
     public function store(Request $request)
     {
-        $idea = trim($request->input('ideas'));
+
+        //validation to make sure the description is not empty
+        $request->validate([
+            'description' => 'required|string|max:255|min:3',
+        ]);
+
+        $idea = trim($request->input('description'));
 
         Idea::create([
             'description' => $idea,

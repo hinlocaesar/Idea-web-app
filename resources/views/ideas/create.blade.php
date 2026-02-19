@@ -9,6 +9,8 @@
         </div>
     </div>
 
+    <x-forms.error name="description" />
+
     <p class="mt-3 text-sm/6 text-gray-400">Have an idea? Share it here.</p>
 
     <div class="mt-6 flex items-center justify-end gap-x-6">
