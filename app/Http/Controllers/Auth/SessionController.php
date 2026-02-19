@@ -34,8 +34,12 @@ class SessionController extends Controller
             return redirect('/ideas');
         }
 
-        //if not authenticated, redirect back
-        return redirect('/login')->with('error', 'Invalid credentials');
+        //if not authenticated, redirect back with validation error
+        return redirect('/login')
+            ->withErrors([
+                'email' => 'Invalid credentials'
+            ])
+            ->withInput();
     }
 
 
