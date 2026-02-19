@@ -32,6 +32,6 @@ class RegisterUserController extends Controller
         \Illuminate\Support\Facades\Auth::login($user);
 
         //redirect to home page
-        return redirect('/');
+        return redirect('/ideas');
     }
 }
