@@ -19,7 +19,8 @@
 @else
     <div class="mt-6 text-center">
         <h2 class="text-2xl font-bold mb-4">No Ideas Found</h2>
-        <a href="/ideas/create" class="btn btn-primary">Create an Idea</a>
+
     </div>
 @endif
+    <a href="/ideas/create" class="btn btn-primary">Create an Idea</a>
 </x-layout>
